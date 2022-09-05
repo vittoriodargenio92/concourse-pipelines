@@ -1,5 +1,5 @@
 resources:
-  - name: python-example
+  - name: python-example-git
     type: git
     icon: github
     source:
@@ -9,11 +9,15 @@ resources:
 jobs:
   - name: python-example
     plan:
-      - get: python-example
+      - get: python-example-git
         trigger: true
-      - task: simple-task
+  - name: python-example-test
+    plan:
+      - task: python-example-start
         config:
           platform: linux
+          inputs:
+            - name: python-example-git
           image_resource:
             type: registry-image
             source: { repository: busybox }
