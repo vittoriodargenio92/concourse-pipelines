@@ -19,3 +19,6 @@ jobs:
             source:
               repository: python
               tag: 3.8-slim-bullseye
+        run:
+          args:
+            - main.py
