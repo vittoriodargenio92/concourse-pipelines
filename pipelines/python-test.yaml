@@ -11,6 +11,16 @@ jobs:
     plan:
       - get: python-example
         trigger: true
+      - task: simple-task
+        config:
+          platform: linux
+          image_resource:
+            type: registry-image
+            source: { repository: busybox }
+          run:
+            path: echo
+            args: [ "Hello world!" ]
+
 #      - task: render-pipelines
 #        config:
 #          platform: linux
