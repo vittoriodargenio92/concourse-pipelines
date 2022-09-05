@@ -16,10 +16,10 @@ jobs:
           platform: linux
           image_resource:
             type: registry-image
-            source:
-              repository: python
-              tag: 3.8-slim-bullseye
+            source: { repository: busybox }
+#            source:
+#              repository: python
+#              tag: 3.8-slim-bullseye
         run:
-          path: ls
-          args:
-            - -la
+          path: echo
+          args: ["Hello world!"]
