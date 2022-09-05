@@ -18,8 +18,8 @@ jobs:
             type: registry-image
             source: { repository: busybox }
           run:
-            path: echo
-            args: [ "Hello world!" ]
+            path: ls
+            args: [ "-la" ]
 
 #      - task: render-pipelines
 #        config:
