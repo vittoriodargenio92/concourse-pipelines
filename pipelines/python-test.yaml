@@ -20,5 +20,6 @@ jobs:
               repository: python
               tag: 3.8-slim-bullseye
         run:
+          path: ls
           args:
-            - main.py
+            - -la
