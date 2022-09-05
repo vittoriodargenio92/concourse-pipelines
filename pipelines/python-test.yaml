@@ -11,15 +11,15 @@ jobs:
     plan:
       - get: python-example
         trigger: true
-      - task: render-pipelines
-        config:
-          platform: linux
-          image_resource:
-            type: registry-image
-            source: { repository: busybox }
+#      - task: render-pipelines
+#        config:
+#          platform: linux
+#          image_resource:
+#            type: registry-image
+#            source: { repository: busybox }
 #            source:
 #              repository: python
 #              tag: 3.8-slim-bullseye
-        run:
-          path: echo
-          args: ["Hello world!"]
+#        run:
+#          path: echo
+#          args: ["Hello world!"]
