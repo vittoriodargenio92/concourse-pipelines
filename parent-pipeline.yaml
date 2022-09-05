@@ -3,7 +3,7 @@ resources:
     type: git
     icon: github
     source:
-      uri: git@github.com:vittoriodargenio92/concourse-pipelines.git
+      uri: https://github.com/vittoriodargenio92/concourse-pipelines.git
 
 jobs:
   - name: configure-self
