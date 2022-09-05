@@ -17,3 +17,5 @@ jobs:
       - get: concourse-pipelines
         trigger: true
         passed: [configure-self]
+      - set_pipeline: python-example
+        file: pipelines/python-test.yaml

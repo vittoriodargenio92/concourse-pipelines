@@ -1,0 +1,24 @@
+resources:
+  - name: python-example
+    type: git
+    icon: github
+    source:
+      uri: https://github.com/vittoriodargenio92/python-example.git
+
+
+jobs:
+  - name: python-example
+    plan:
+      - get: python-example
+        trigger: true
+      - task: render-pipelines
+        config:
+          platform: linux
+          image_resource:
+            type: registry-image
+            source:
+              repository: python:3.8.13-slim-buster
+        run:
+          path: python
+          args:
+            - main.py
