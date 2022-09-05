@@ -18,10 +18,12 @@ jobs:
             - name: python-example-git
           image_resource:
             type: registry-image
-            source: { repository: busybox }
+            source:
+              repository: python
+              tag: 3.8-slim-bullseye
           run:
             path: ls
-            args: [ "-la" ]
+            args: [ "python-example-git/main.py" ]
 
 #      - task: render-pipelines
 #        config:
