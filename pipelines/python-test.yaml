@@ -22,6 +22,7 @@ jobs:
               repository: python
               tag: 3.8-slim-bullseye
           run:
+            path: python
             args: [ "python-example-git/main.py" ]
 
 #      - task: render-pipelines
