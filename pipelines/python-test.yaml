@@ -11,8 +11,6 @@ jobs:
     plan:
       - get: python-example-git
         trigger: true
-  - name: python-example-test
-    plan:
       - task: python-example-start
         config:
           platform: linux
